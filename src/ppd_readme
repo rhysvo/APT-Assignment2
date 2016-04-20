@@ -1,0 +1,29 @@
+# apt-a2
+Advanced programming assignment2
+Assmuptions:
+	Given the highest value currency defined in the ppd_coin.h file is ten
+	dollars, I found it appropriate to make ten dollars the highest denomination
+	accepted by the program, either by accepting user input(money) or in file 
+	reading.
+	Also, given the sample executable, I assumed it was appropriate to sort the
+	list by Name, but did not attempt to sort by name ignoring case. 
+
+The Boolean type:
+	To make full use of the BOOLEAN typedef made in ppd_main.h, I pulled it out,
+	and made it its own header file, called bool.h. This allowed me to 
+	restructure my program to avoid circular dependencies, yet be able to use 
+	BOOLEAN in every file.
+
+Possible Improvements:
+	Having learned a lot(I hope) in the past month or so, I do see ways to 
+	improve the general working of my program. Given the time, I would 
+	implement a Genereic linked list, with the appropriate function pointers.
+	I would also change the ways I add to the list, would avoid returning
+	a struct ppd_node in the function load_item_file in the stock.c file. 
+	Another imporvment would be to abstract a function to accept user input
+	other than an integer, such as a String, and pass the maximum length, and
+	a message such as the name of what data im attempting to propt the user for.
+
+File Checking:
+	When reading in the Coin file, the load_coin function ignores letters, 
+	rather than exiting entirely.
